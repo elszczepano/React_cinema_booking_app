@@ -1,26 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import AvailableMovies from './Containers/AvailableMovies';
+import Movie from './Containers/Movie';
+import ChooseSeats from './Containers/ChooseSeats';
+import ConfirmReservation from './Containers/ConfirmReservation';
+import Summary from './Containers/Summary';
 
 class App extends Component {
 	render() {
 		return (
-			<div className="App">
-				<header className="App-header">
-					<img src={logo} className="App-logo" alt="logo" />
-					<p>
-						Edit <code>src/App.js</code> and save to reload.
-					</p>
-					<a
-						className="App-link"
-						href="https://reactjs.org"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Learn React
-					</a>
-				</header>
-			</div>
+			<Router>
+				<>
+					<Route exact path="/" component={AvailableMovies} />
+					<Route exact path="/movie" component={Movie} />
+					<Route exact path="/seats" component={ChooseSeats} />
+					<Route exact path="/confirm" component={ConfirmReservation} />
+					<Route exact path="/summary" component={Summary} />
+				</>
+			</Router>
 		);
 	}
 }
