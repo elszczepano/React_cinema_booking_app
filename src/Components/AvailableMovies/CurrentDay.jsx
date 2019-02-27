@@ -9,12 +9,12 @@ const Header = styled.h1`
 
 const CurrentDay = () => {
 	const getTodayDate = () => {
-		const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+		const monthNames = ['Stycznia', 'Lutego', 'Marca', 'Kwietnia', 'Maja', 'Czerwca', 'Lipca', 'Sierpnia', 'Września', 'Października', 'Listopada', 'Grudnia'];
 		const now = new Date();
 		return `${now.getUTCDate()} ${monthNames[now.getMonth()]} ${now.getFullYear()}`;
 	};
 	return (
-		<Header>Repertiore for {getTodayDate()}</Header>
+		<Header>Repertuar na {getTodayDate()}</Header>
 	);
 };
 
