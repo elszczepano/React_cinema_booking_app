@@ -30,7 +30,6 @@ class ChooseMovie extends Component {
 	}
 	chooseMovie = e => {
 		const title = this.props.movies.filter(movie => movie.id === parseInt(e.target.value))[0].title;
-		console.log(title);
 		this.setState({
 			movieTitle: title,
 			movieId: e.target.value
