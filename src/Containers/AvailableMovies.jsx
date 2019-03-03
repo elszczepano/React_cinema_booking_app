@@ -25,7 +25,8 @@ class AvailableMovies extends Component {
 			this.setState({
 				availableMovies: res.data
 			});
-
+		}).catch(() => {
+			window.alert('Nie udało się pobrać listy dostępnych filmów. Spróbuj odświeżyć stronę.');
 		});
 	}
 	setFilter = e => {

@@ -30,6 +30,8 @@ class FilterByCategory extends Component {
 			this.setState({
 				categories: res.data
 			});
+		}).catch(() => {
+			window.alert('Coś poszło nie tak. Spróbuj odświeżyć stronę.');
 		});
 	}
 

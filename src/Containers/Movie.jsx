@@ -39,6 +39,8 @@ class Movie extends Component {
 			this.setState({
 				movieDetails: res.data
 			});
+		}).catch(() => {
+			window.alert('Nie udało się wczytać danych o filmie. Spróbuj odświeżyć stronę.');
 		});
 	}
 	render() {
