@@ -20,10 +20,10 @@ const Button = styled.button`
 	}
 `;
 
-const ConfirmChoose = () => {
+const ConfirmChoose = ({sendReservationRequest}) => {
 	return (
 		<Wrapper>
-			<Button>Potwierdzam wybór miejsc</Button>
+			<Button onClick={sendReservationRequest}>Potwierdzam wybór miejsc</Button>
 		</Wrapper>
 	);
 };
