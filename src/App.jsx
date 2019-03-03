@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-
 import AvailableMovies from './Containers/AvailableMovies';
 import Movie from './Containers/Movie';
 import ChooseSeats from './Containers/ChooseSeats';
-import ConfirmReservation from './Containers/ConfirmReservation';
-import Summary from './Containers/Summary';
+import Payment from './Containers/Payment';
 
 class App extends Component {
 	render() {
@@ -15,8 +13,7 @@ class App extends Component {
 					<Route exact path="/" component={AvailableMovies} />
 					<Route exact path="/movie/:id" component={Movie} />
 					<Route exact path="/seats/:id" component={ChooseSeats} />
-					<Route exact path="/confirm" component={ConfirmReservation} />
-					<Route exact path="/summary" component={Summary} />
+					<Route exact path="/payment" component={Payment} />
 				</>
 			</Router>
 		);
