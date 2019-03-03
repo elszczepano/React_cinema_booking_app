@@ -6,7 +6,7 @@ const Container = styled(Link)`
 	text-decoration: none;
 	color: white;
 	display: grid;
-	padding: 20px 0;
+	padding: 20px 10px;
 	border-bottom: 2px solid orange;
 	transition: .5s all;
 	cursor: pointer;
@@ -14,7 +14,6 @@ const Container = styled(Link)`
 		color: black;
 		background-color: orange;
 		transform: scale(1.03);
-	
 	}
 `;
 const Title = styled.h2`
