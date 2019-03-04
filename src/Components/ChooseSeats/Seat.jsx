@@ -5,6 +5,7 @@ const Input = styled.input`
 	display: none;
 `;
 const Label = styled.label`
+	display: flex;
 	width: 25px;
 	height: 25px;
 `;
@@ -25,10 +26,10 @@ class Seat extends Component {
 	render() {
 		const {seatId, available} = this.props;
 		return (
-			<>
+			<div>
 				<Label style={{backgroundColor: this.state.backgroundColor}} onClick={this.changeStatus} available={available} htmlFor={seatId}></Label>
 				<Input type="checkbox" id={seatId} name={seatId} disabled={available}/>
-			</>
+			</div>
 		);
 	}
 }

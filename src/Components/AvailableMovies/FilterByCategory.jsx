@@ -10,9 +10,12 @@ const Select = styled.select`
 `;
 const Wrapper = styled.div`
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: center;
-	margin: 0 0 30px 0;
+	${({theme}) => theme.media.desktop} {
+		margin: 0 0 30px 0;
+		justify-content: flex-end;
+	}
 `;
 const H3 = styled.h3`
 	margin: 0 15px 0 0;

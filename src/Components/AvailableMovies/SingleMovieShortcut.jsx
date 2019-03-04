@@ -10,26 +10,34 @@ const Container = styled(Link)`
 	border-bottom: 2px solid orange;
 	transition: .5s all;
 	cursor: pointer;
-	&:hover {
-		color: black;
-		background-color: orange;
-		transform: scale(1.03);
+	${({theme}) => theme.media.desktop} {
+		&:hover {
+			color: black;
+			background-color: orange;
+			transform: scale(1.03);
+		}
 	}
+	
 `;
 const Title = styled.h2`
 	margin: 10px 0;
 `;
 const Details = styled.ul`
-	display: flex;
 	list-style: none;
 	padding: 0;
 	margin: 5px 0;
+	${({theme}) => theme.media.desktop} {
+			display: flex;
+	}
 `;
 const Detail = styled.li`
 	margin: 0 5px;
-	&:first-of-type {
-		margin: 0 5px 0 0 ;
+	${({theme}) => theme.media.desktop} {
+		&:first-of-type {
+			margin: 0 5px 0 0 ;
+		}
 	}
+	
 `;
 const SingleMovieShortcut = ({movie}) => {
 	return (
@@ -37,7 +45,7 @@ const SingleMovieShortcut = ({movie}) => {
 			<Title>{movie.title}</Title>
 			<Details>
 				{movie.categories.map((category, i) => <Detail key={i}>{category},</Detail>)}
-				<Detail>Przedział wiekowy: {movie.ageLimit},</Detail>
+				<Detail>Limit wieku: {movie.ageLimit || 'brak'},</Detail>
 				<Detail>Czas trwania: {movie.duration} min.</Detail>
 			</Details>
 		</Container>

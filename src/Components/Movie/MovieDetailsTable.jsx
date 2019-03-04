@@ -25,7 +25,7 @@ const MovieDetailsTable = ({details}) => {
 				<tbody>
 					<Tr>
 						<td>Limit wiekowy:</td>
-						<td>{details.ageLimit} lat</td>
+						<td>{details.ageLimit ? `${details.ageLimit} lat` : 'brak'}</td>
 					</Tr>
 					<Tr>
 						<td>Czas trwania:</td>

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
 	display: flex;
 	justify-content: center;
-	margin: 100px 0;
+	margin: 100px 20px;
 `;
 const Message = styled.div`
 	color: ${({success}) => success ? 'green' : 'red'};

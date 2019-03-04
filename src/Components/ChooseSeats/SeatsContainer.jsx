@@ -4,7 +4,7 @@ import API from '../../apiConfig';
 import Seat from './Seat';
 
 const Grid = styled.div`
-	margin-top: 30px;
+	margin: 30px 20px;
 	display: grid;
 	grid-template-rows: repeat(14, 1fr);
 	grid-template-columns: repeat(20, 1fr);
@@ -28,12 +28,18 @@ class SeatsContainer extends Component {
 			window.alert('Nie udało się pobrać listy dostępnych miejsc. Spróbuj jeszcze raz.');
 		});
 	}
-
 	render() {
 		return (
 			<Grid>
 				{this.state.availableSeats ? this.state.availableSeats.map((row, rowIndex) =>
-					row.seats.map((seat, seatIndex) => <Seat toggleSeat={this.props.toggleSeat} seatId={`${rowIndex}${seatIndex}`} key={`${rowIndex}${seatIndex}`} row={rowIndex} seat={seatIndex} available={seat}/>)
+					row.seats.map((seat, seatIndex) => <Seat
+						toggleSeat={this.props.toggleSeat}
+						seatId={`${rowIndex}${seatIndex}`}
+						key={`${rowIndex}${seatIndex}`}
+						row={rowIndex}
+						seat={seatIndex}
+						available={seat}
+					/>)
 				): null}
 			</Grid>
 		);

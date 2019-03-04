@@ -4,6 +4,7 @@ import { Redirect } from 'react-router';
 
 const H1 = styled.h1`
 	text-align: center;
+	margin: 20px;
 `;
 const Title = styled.span`
 	color: orange;
