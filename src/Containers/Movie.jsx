@@ -21,11 +21,9 @@ const BackLinkWrapper = styled.div`
 	padding: 50px 0;
 	max-width: 90%;
 `;
-
 const BackLink = styled(Link)`
 	color: orange;
 `;
-
 
 class Movie extends Component {
 	constructor(props) {

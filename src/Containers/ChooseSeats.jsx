@@ -53,7 +53,6 @@ class ChooseSeats extends Component {
 					});
 			}
 		}
-
 	};
 	render() {
 		const title = !this.props.location.state ? '' : this.props.location.state.title;

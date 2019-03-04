@@ -16,15 +16,23 @@ class Payment extends Component {
 		super(props);
 		this.state = {
 			success: true,
-			message: ''
+			message: '',
+			paid: false
 		};
 	}
 	sendPaymentRequest = () => {
+		if(this.state.paid) {
+			this.setState({
+				message: 'Płatność została już dokonana.'
+			});
+			return;
+		}
 		API.post('Payment/PayForReservations',{
 			reservationToken: this.props.location.state.token
 		}).then(() => {
 			this.setState({
 				success: true,
+				paid: true,
 				message: 'Wszystko poszło zgodnie z planem. Pomyslnie opłacono i zarezerwowano miejsca. Życzymy miłego seansu.'
 			});
 		}).catch(() => {

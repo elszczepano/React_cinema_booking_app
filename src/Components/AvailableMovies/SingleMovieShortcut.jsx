@@ -17,7 +17,6 @@ const Container = styled(Link)`
 			transform: scale(1.03);
 		}
 	}
-	
 `;
 const Title = styled.h2`
 	margin: 10px 0;
@@ -37,8 +36,8 @@ const Detail = styled.li`
 			margin: 0 5px 0 0 ;
 		}
 	}
-	
 `;
+
 const SingleMovieShortcut = ({movie}) => {
 	return (
 		<Container to={`/movie/${movie.id}`}>

@@ -14,7 +14,7 @@ const Title = styled.span`
 	color: orange;
 `;
 
-const MovieTitle = ({title}) => {
+const MovieTitle = ({title = ''}) => {
 	return (
 		<H1>Szczegóły o filmie <Title>{title}</Title></H1>
 	);
